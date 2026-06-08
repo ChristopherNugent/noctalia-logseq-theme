@@ -1,0 +1,10 @@
+.dark-theme,
+html[data-theme=dark] {
+	/* Background colors */
+    --ls-primary-background-color: {{colors.surface.dark.hex}};
+    --ls-secondary-background-color: {{colors.surface_container.dark.hex}};
+    
+    
+    /* Text colors */
+    --ls-text-primary-text-color: {{colors.on_surface.dark.hex}}
+}
