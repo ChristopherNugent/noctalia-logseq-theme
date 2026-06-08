@@ -17,7 +17,15 @@ html[data-color='none'] {
 	--color-level-2: var(--ls-secondary-background-color);
 	--color-level-3: var(--ls-tertiary-background-color);
 	--color-level-4: var(--ls-quatery-background-color);
-	
+
+	/* 
+	Some fields are hardcoded to be wrapped w/ HSL values. 
+	--popover controls some menu backgrounds
+	--border controls the backgrounds for those menus.
+	*/
+	--popover: {{colors.surface_variant.default.hue}} {{colors.surface_variant.default.saturation}} {{colors.surface_variant.default.lightness}};
+	--border: {{colors.outline.default.hue}} {{colors.outline.default.saturation}} {{colors.outline.default.lightness}};
+
 	/* Accents */
 	--ls-active-primary-color: {{colors.primary.default.hex}};
 	--ls-active-secondary-color: {{colors.secondary.default.hex}};
