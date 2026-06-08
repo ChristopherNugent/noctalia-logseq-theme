@@ -43,6 +43,7 @@ html[data-color='none'] {
 	--ls-link-text-hover-color: {{colors.primary.default.hex | lighten 0.1}};
 	--ls-link-ref-text-color: {{colors.secondary.default.hex}};
 	--ls-link-ref-text-hover-color: {{colors.secondary.default.hex | lighten 0.1}};
+	--lx-accent-11: var(--ls-link-text-color);
 
 	/* Selection */
 	--ls-selection-background-color: {{colors.primary_container.default.hex}};
