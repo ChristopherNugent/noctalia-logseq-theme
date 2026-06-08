@@ -1,14 +1,30 @@
-.dark-theme,
-html[data-theme=dark] {
+/* Ignore light/dark theme, let Noctalia dictate for now */
+html:not(html[data-color]),
+html[data-theme='dark'][data-color='logseq'],
+html[data-theme='light'][data-color='logseq'],
+html[data-theme='dark'],
+html[data-theme='light'],
+html[data-color='none'] {
 	/* Background colors */
-    --ls-primary-background-color: {{colors.surface.dark.hex}};
-    --ls-secondary-background-color: {{colors.surface_container.dark.hex}};
-    --ls-tertiary-background-color: {{colors.surface_container_low.dark.hex}};
-    --ls-quatery-background-color: {{colors.surface_container_high.dark.hex}};
+    --ls-primary-background-color: {{colors.surface.default.hex}};
+    --ls-secondary-background-color: {{colors.surface_container.default.hex}};
+    --ls-tertiary-background-color: {{colors.surface_container_low.default.hex}};
+    --ls-quatery-background-color: {{colors.surface_container_high.default.hex}};
+    --ls-modal-overlay-gradient-start: var(--ls-secondary-background-color);
+    --ls-modal-overlay-gradient-end: var(--ls-tertiary-background-color);
+
+    
+    --color-level-1: var(--ls-primary-background-color);
+    --color-level-2: var(--ls-secondary-background-color);
+    --color-level-3: var(--ls-tertiary-background-color);
+    --color-level-4: var(--ls-quatery-background-color);
     
     /* Accents */
-    --ls-active-primary-color: {{colors.primary.dark.hex}};
-    --ls-secondary-primary-color: {{colors.secondary.dark.hex}};
+    --ls-active-primary-color: {{colors.primary.default.hex}};
+    --ls-active-secondary-color: {{colors.secondary.default.hex}};
+    --ls-block-bullet-color: {{colors.primary.default.hex}};
+    --ls-guideline-color: {{colors.outline_variant.default.hex}};
+
     
     	/* PROPERTIES */
 	--ls-block-properties-background-color: var(--ls-tertiary-background-color);
@@ -16,13 +32,18 @@ html[data-theme=dark] {
     
 	/* SEARCH */
 	--ls-search-background-color: var(--ls-tertiary-background-color);
-    --ls-border-color: {{colors.outline.dark.hex}};
+    --ls-border-color: {{colors.outline.default.hex}};
     
     /* Text colors */
-    --ls-primary-text-color: {{colors.on_surface.dark.hex}};
-    --ls-link-text-color: {{colors.on_surface_variant.dark.hex}};
-	--bold: {{colors.on_primary.dark.hex}};
+    --ls-primary-text-color: {{colors.on_surface.default.hex}};
+    --ls-link-text-color: {{colors.on_surface_variant.default.hex}};
+	--bold: {{colors.on_primary.default.hex}};
 	--italic: var(--bold);
+    
+    /* Selection */
+    --ls-selection-background-color: {{colors.primary_container.default.hex}};
+    --ls-selection-text-color: {{colors.on_primary_container.default.hex}};
+
     
     /* QUOTES */
 	--ls-page-blockquote-color: var(--ls-primary-text-color);
@@ -32,5 +53,8 @@ html[data-theme=dark] {
 	--ls-head-text-color: var(--ls-link-text-color);
     
     /* Code */
-	--ls-page-inline-code-bg-color: var(--ls-secondary-background-color);;
+	--ls-page-inline-code-bg-color: var(--ls-secondary-background-color);
+    .CodeMirror, .CodeMirror-gutters {
+      background-color: var(--ls-secondary-background-color);
+    }
 }
