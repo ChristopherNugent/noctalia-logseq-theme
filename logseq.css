@@ -23,6 +23,7 @@ html[data-color='none'] {
 	--ls-active-secondary-color: {{colors.secondary.default.hex}};
 	--ls-block-bullet-color: {{colors.primary.default.hex}};
 	--ls-guideline-color: {{colors.outline_variant.default.hex}};
+	--ls-page-checkbox-color: {{colors.primary.default.hex}};
 	--lx-accent-01: {{colors.primary.default.hex}};
 
 	/* PROPERTIES */
