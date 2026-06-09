@@ -7,11 +7,22 @@ html[data-theme='light'][data-color='logseq'],
 html[data-theme='dark'],
 html[data-theme='light'],
 html[data-color='none'] {
+	--noct-primary-color: {{colors.primary.default.hex}};
+	--noct-secondary-color: {{colors.secondary.default.hex}};
+	--noct-tertiary-color: {{colors.tertiary.default.hex}};
+	--noct-outline-color: {{colors.outline.default.hex}};
+	--noct-outline-variant-color: {{colors.outline_variant.default.hex}};
+	
+	--noct-bg-color-1: {{colors.surface.default.hex}};
+	--noct-on-bg-color-1: {{colors.on_surface.default.hex}};
+	--noct-bg-color-2: {{colors.surface_variant.default.hex}};
+	--noct-on-bg-color-2: {{colors.on_surface_variant.default.hex}};
+
 	/* Background colors */
-	--ls-primary-background-color: {{colors.surface.default.hex}};
-	--ls-secondary-background-color: {{colors.surface_container.default.hex}};
+	--ls-primary-background-color: var(--noct-bg-color-1);
+	--ls-secondary-background-color: var(--noct-bg-color-2);
 	--ls-tertiary-background-color: {{colors.surface_container_low.default.hex}};
-	--ls-quatery-background-color: {{colors.surface_container_high.default.hex}};
+	--ls-quaternary-background-color: {{colors.surface_container_high.default.hex}};
 	--ls-modal-overlay-gradient-start: var(--ls-secondary-background-color);
 	--ls-modal-overlay-gradient-end: var(--ls-tertiary-background-color);
 
@@ -27,16 +38,16 @@ html[data-color='none'] {
 	*/
 	--popover: {{colors.surface_variant.default.hue}} {{colors.surface_variant.default.saturation}}% {{colors.surface_variant.default.lightness}}%;
 	--border: {{colors.outline.default.hue}} {{colors.outline.default.saturation}}% {{colors.outline.default.lightness}}%;
-	--primary: var(--popover);
+	--primary: {{colors.primary.default.hue}} {{colors.primary.default.saturation}}% {{colors.primary.default.lightness}}%;
 
 	/* Accents */
-	--ls-active-primary-color: {{colors.primary.default.hex}};
-	--ls-active-secondary-color: {{colors.secondary.default.hex}};
-	--ls-block-bullet-color: {{colors.primary.default.hex}};
-	--ls-guideline-color: {{colors.outline_variant.default.hex}};
-	--ls-page-checkbox-color: {{colors.primary.default.hex}};
-	--lx-accent-01: {{colors.primary.default.hex}};
-	--ls-scrollbar-foreground-color: var(--ls-secondary-background-color);
+	--ls-active-primary-color: var(--noct-primary-color);
+	--ls-active-secondary-color: var(--noct-secondary-color);
+	--ls-block-bullet-color: var(--noct-primary-color);
+	--ls-guideline-color: var(--noct-outline-variant-color);
+	--ls-page-checkbox-color: var(--noct-primary-color);
+	--lx-accent-01: var(--noct-primary-color);
+	--ls-scrollbar-foreground-color: var(--noct-tertiary-color);
 	--ls-block-highlight-color: var(--ls-secondary-background-color);
 
 	/* PROPERTIES */
@@ -45,12 +56,12 @@ html[data-color='none'] {
 	
 	/* SEARCH */
 	--ls-search-background-color: var(--ls-tertiary-background-color);
-	--ls-border-color: {{colors.outline.default.hex}};
+	--ls-border-color: var(--noct-outline-color);
 	
 	/* Text colors */
-	--ls-primary-text-color: {{colors.on_surface.default.hex}};
-	--bold: {{colors.on_primary.default.hex}};
-	--italic: var(--bold);
+	--ls-primary-text-color: var(--noct-on-bg-color-1);
+	--bold: var(--noct-tertiary-color);
+	--italic: var(--noct-tertiary-color);
 
 	/* Links */
 	--ls-link-text-color: {{colors.primary.default.hex}};
@@ -73,6 +84,7 @@ html[data-color='none'] {
 	/* Code */
 	--ls-page-inline-code-bg-color: var(--ls-secondary-background-color);
 	.CodeMirror, .CodeMirror-gutters {
-		background-color: var(--ls-secondary-background-color);
+		background-color: var(--noct-bg-color-2);
+		color: var(--noct-on-bg-color-2);
 	}
 }
