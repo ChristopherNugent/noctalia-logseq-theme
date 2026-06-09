@@ -25,6 +25,7 @@ html[data-color='none'] {
 	--ls-quaternary-background-color: {{colors.surface_container_high.default.hex}};
 	--ls-modal-overlay-gradient-start: var(--ls-secondary-background-color);
 	--ls-modal-overlay-gradient-end: var(--ls-tertiary-background-color);
+	--ls-table-tr-even-background-color: var(--ls-secondary-background-color);
 
 	--color-level-1: var(--ls-primary-background-color);
 	--color-level-2: var(--ls-secondary-background-color);
