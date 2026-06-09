@@ -36,6 +36,7 @@ html[data-color='none'] {
 	--ls-guideline-color: {{colors.outline_variant.default.hex}};
 	--ls-page-checkbox-color: {{colors.primary.default.hex}};
 	--lx-accent-01: {{colors.primary.default.hex}};
+	--ls-scrollbar-foreground-color: var(--ls-secondary-background-color);
 	--ls-block-highlight-color: var(--ls-secondary-background-color);
 
 	/* PROPERTIES */
