@@ -39,6 +39,7 @@ html[data-color='none'] {
 	--popover: {{colors.surface_variant.default.hue}} {{colors.surface_variant.default.saturation}}% {{colors.surface_variant.default.lightness}}%;
 	--border: {{colors.outline.default.hue}} {{colors.outline.default.saturation}}% {{colors.outline.default.lightness}}%;
 	--primary: {{colors.primary.default.hue}} {{colors.primary.default.saturation}}% {{colors.primary.default.lightness}}%;
+	--primary-foreground: {{colors.on_primary.default.hue}} {{colors.on_primary.default.saturation}}% {{colors.on_primary.default.lightness}}%;
 
 	/* Accents */
 	--ls-active-primary-color: var(--noct-primary-color);
